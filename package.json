@@ -1,0 +1,26 @@
+{
+  "name": "profundity-node",
+  "version": "0.1.0",
+  "description": "profundity nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "simply": "hotnode --debug www/simply_server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maoruibin001/profundity-node.git"
+  },
+  "keywords": [
+    "profundity"
+  ],
+  "author": "maoruibin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maoruibin001/profundity-node/issues"
+  },
+  "homepage": "https://github.com/maoruibin001/profundity-node#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
