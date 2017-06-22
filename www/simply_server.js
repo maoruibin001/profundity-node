@@ -16,7 +16,7 @@ var app = express();
 app.use(function(req, res, next) {
 
     let reqUrl = SERVER + req.url.substring(req.url.indexOf('/los/'));
-    var urlObj = url.parse(reqUrl);
+    const urlObj = url.parse(reqUrl);
     let apiReqOpts = {
         hostname: urlObj.hostname,
         port: urlObj.port,

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input[type="text"]:-moz-read-only{
+            border-color: red;
+        }
+        input[type="text"]:read-only{
+            border-color: red;
+        }
+    </style>
+</head>
+<body>
+<form action="post.php" method="post" >
+    <input type="text" name="uname" readonly>
+    <input type="submit" value="提交" readonly>
+</form>
+
+</body>
+</html>
