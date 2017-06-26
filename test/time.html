@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>当前时间为：<span id="time"></span></div>
+<script>
+    function formatDate(date, flag) {
+        date = date ? new Date(date) : new Date();
+        var y = date.getFullYear();
+        var m = (date.getMonth() + 1) > 9 ? (date.getMonth() + 1) : '0' + (date.getMonth() + 1);
+        var d = date.getDate() > 9 ? date.getDate() : '0' + date.getDate();
+        var h = date.getHours() > 9 ? date.getHours() : '0' + date.getHours();
+        var M = date.getMinutes() > 9 ? date.getMinutes() : '0' + date.getMinutes();
+        var s = date.getSeconds() > 9 ? date.getSeconds() : '0' + date.getSeconds();
+        if (!flag) {
+            return (y + ' 年 ' + m + ' 月 ' + d + ' 日 ' + h + ' 时 ' + M + ' 分 ' + s + ' 秒');
+        } else if (flag === 'M') {
+            return (y + '-' + m);
+        } else if (flag === 'D') {
+            return (y + '-' + m + '-' + d);
+        }
+    }
+
+    var time = document.querySelector('#time');
+    time.innerHTML = formatDate();
+    setInterval(function() {
+        time.innerHTML = formatDate();
+    }, 1000);
+</script>
+</body>
+</html>
