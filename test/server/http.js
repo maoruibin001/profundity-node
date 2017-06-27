@@ -4,6 +4,7 @@
 const http = require('http');
 
 http.createServer(function (req, res) {
-    res.setHeader('content-type', 'text/plain');
-    res.end('hello world');
-}).listen(2230);
+    res.setHeader('content-type', 'text/html');
+    res.write('<head><meta charset="utf-8"/></head>');
+    res.end('你好');
+}).listen(2220);
