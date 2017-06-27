@@ -15,9 +15,9 @@ var serialize = function (name, val, opt) {
 
 var handle = function (req, res) {
     if (!req.cookies.isVisit) {
-        res.setHeader('Set-Cookie', serialize('isVisit', '1'));
-        // res.write('<head charset="utf-8"></head>');
+        res.setHeader('Set-Cookie', serialize('isVisit', '1', {httpOnly: true}));
         res.writeHead(200);
+        res.write('<head><meta charset="utf-8"></head>');
         res.end("欢迎");
         // res.end('hello 1');
     } else {
